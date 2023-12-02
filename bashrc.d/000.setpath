@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+###########################################################
+# We want to put on the PATH a 'bin' folder to store our
+# executable scripts.
+###########################################################
+
+mkdir -p ~/bin
+[[ $PATH =~ ~/bin ]] || export PATH=~/bin:${PATH} 

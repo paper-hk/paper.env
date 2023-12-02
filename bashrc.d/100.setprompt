@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# We want a nice prompt--one which will show us the state
+# of our git repositories.  There is a script available
+# from github that will set it for us.
+
+dst=${PAPER}/third.bash-git-prompt
+src=https://github.com/magicmonty/bash-git-prompt.git 
+[ -d ${dst} ] || git clone ${src} ${dst} --depth 1
+GIT_PROMPT_ONLY_IN_REPO=1
+source ${dst}/gitprompt.sh
